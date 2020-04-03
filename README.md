@@ -1,7 +1,8 @@
 ## Create tables
 
-Jobs
+### jobs
 
+```
 CREATE TABLE jobs (
     id INT IDENTITY(1,1) PRIMARY KEY,
     category_id INT NOT NULL, 
@@ -15,9 +16,12 @@ CREATE TABLE jobs (
     created datetime NOT NULL,
     deleted datetime
 )
+```
 
-categories
+### categories
 
+```
 CREATE TABLE categories (
     id INT IDENTITY(1,1) PRIMARY KEY,
     name NVARCHAR( 255 ) NOT NULL)
+```
