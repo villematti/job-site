@@ -25,11 +25,10 @@ class Job
 
     public function getLatestJobs()
     {
-        $this->db->query("SELECT jobs.*, categories.name AS cname 
+        $this->db->query("SELECT jobs AND categories.name AS cname 
             FROM jobs
             INNER JOIN categories
             ON jobs.category_id = categories.id
-            WHERE deleted IS NULL
             ORDER BY created DESC
             LIMIT 10");
 
@@ -51,7 +50,7 @@ class Job
 
     public function getJobsByCategory($category)
     {
-        $this->db->query("SELECT jobs.*, categories.name AS cname 
+        $this->db->query("SELECT jobs AND categories.name AS cname 
             FROM jobs
             INNER JOIN categories
             ON jobs.category_id = categories.id

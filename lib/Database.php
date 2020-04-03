@@ -13,13 +13,10 @@ class Database
     public function __construct()
     {
         // Set DSN
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+        $dsn = 'sqlsrv:server=' . $this->host . ';Database=' . $this->dbname;
 
         // Set options
-        $options = array(
-            PDO::ATTR_PERSISTENT => true,
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-        );
+        $options = array();
 
         // PDO Instance
         try {
