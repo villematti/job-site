@@ -1,4 +1,10 @@
 <?php
+// Start Session
+session_start();
+
+// Include Helpers
+require_once 'helpers/system_helper.php';
+
 // Config File
 require_once 'config.php';
 
